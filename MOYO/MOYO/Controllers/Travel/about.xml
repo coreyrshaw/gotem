@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+     <photos>
+        <photo>
+            <path>munich1</path>
+        </photo>
+        <photo>
+            <path>munich2</path>
+        </photo>
+        <photo>
+            <path>munich3</path>
+        </photo>
+    </photos>
+
+    <description>
+        <content>Munich, Bavaria's capital, is home to centuries-old buildings and numerous museums. The city is known for its annual Oktoberfest celebration and its beer halls, including the famed Hofbraeuhaus, founded in 1589. In the Altstadt, central Marienplatz square contains landmarks such as Neo Gothic Neues Rathaus (town hall), with a popular glockenspiel show that chimes and reenacts stories from the 16th century.</content>
+    </description>
+</data>

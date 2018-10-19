@@ -1,0 +1,9 @@
+disabled_rules:
+  - trailing_whitespace
+
+line_length: 500
+force_cast: warning
+excluded:
+  - Carthage
+  - Pods
+  

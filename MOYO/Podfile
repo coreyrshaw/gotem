@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'MOYO' do
+  use_frameworks!
+
+  # Pods for MOYO
+  pod 'Alamofire', '<= 4.7.2'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
+  pod 'RealmSwift'
+  pod 'Fabric'
+  pod 'Crashlytics'
+  pod  'SearchTextField'
+  pod 'KeychainSwift'
+  pod 'AlamofireImage', '~> 3.0'
+  pod 'SnapKit'
+  #pod 'SwiftCharts', :git => 'https://github.com/i-schuetz/SwiftCharts.git'
+  pod 'SwiftCharts', '<= 0.6.2'
+  pod 'KRProgressHUD', '<= 3.2.2'
+end

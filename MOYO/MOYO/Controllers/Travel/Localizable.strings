@@ -1,0 +1,44 @@
+/* 
+  Localizable.strings
+  CityGuide
+
+  Copyright © 2016 dmbTeam. All rights reserved.
+*/
+
+// Home screen
+"CityKey" = "Atlanta";
+"CountryKey" = "Georgia";
+"SearchInCityKey" = "Search for healthy places";
+"SleepKey" = "Sleep";
+"EatKey" = "Eat";
+"EnjoyKey" = "Fitness";
+"FavoritesTitleKey" = "Favorites";
+"RateAppKey" = "";
+"AboutKey" = "About";
+"WeatherUnavailableKey" = "Weather Unavailable";
+"AroundMeKey" = "AROUND ME?";
+"HomeScreenTitleKey" = "Environment";
+
+// Favourites screen
+"NoFavoritePlacesKey" = "You still haven't found your favorite places.";
+
+// Place Details scree
+"AddressKey" = "ADDRESS";
+"PhoneKey" = "PHONE";
+"PriceRatingKey" = "Price Rating";
+"RatingKey" = "Rating";
+
+// Reviews screen
+"ReviewsScreenTitleKey" = "Reviews";
+
+// About & Weather screens
+"CityCountryKey" = "Munich, Germany";
+
+// Weather screen
+"WeatherForecastKey" = "Weather forecast";
+
+// Map screen
+"LocationDetailsButtonTitleKey" = "Photos, Address, Phones and Reviews";
+
+// Various
+"NoLocationsFoundKey" = "We were unable to find any locations.";

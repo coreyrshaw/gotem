@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JGA-Oa-4qs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Blood Pressure View Controller-->
+        <scene sceneID="Etv-nX-NPC">
+            <objects>
+                <viewController id="JGA-Oa-4qs" customClass="BloodPressureViewController" customModule="MOYO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MeP-dL-gcN"/>
+                        <viewControllerLayoutGuide type="bottom" id="fP9-fC-WiF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OPt-eG-1hl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snap/upload a clear picture of your vitals signs and confirm the values below. Then press the button to submit." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Jna-ZE-2od">
+                                <rect key="frame" x="19" y="30" width="337.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadVitals" translatesAutoresizingMaskIntoConstraints="NO" id="FG1-Sv-wuz">
+                                <rect key="frame" x="37.5" y="111" width="300" height="233.5"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.055870378521126758" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="VPo-Pt-30H" appends="YES" id="EbP-Ir-9of"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lf-Ys-Uz1">
+                                <rect key="frame" x="135" y="354.5" width="105" height="34"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Snap/Upload">
+                                    <color key="titleColor" red="0.054901960780000002" green="0.23137254900000001" blue="0.73177237969999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.67689845469999999" green="0.85872765969999998" blue="0.99221161270000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.67689845469999999" green="0.85872765969999998" blue="0.99221161270000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeAction:" destination="JGA-Oa-4qs" eventType="touchUpInside" id="tBt-xD-7t1"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oT-kK-uud">
+                                <rect key="frame" x="30" y="416.5" width="315" height="133.5"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleAspectFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXY-I1-tSG">
+                                <rect key="frame" x="19" y="607" width="337.5" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="0.50477566614420066" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitData:" destination="JGA-Oa-4qs" eventType="touchUpInside" id="cOG-8a-Fes"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sJJ-st-gWC">
+                                <rect key="frame" x="30" y="395" width="315" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dt6-je-7EI">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0B8-qN-9aK">
+                                        <rect key="frame" x="105" y="0.0" width="105" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvL-2y-RCo">
+                                        <rect key="frame" x="210" y="0.0" width="105" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="9oT-kK-uud" firstAttribute="top" secondItem="sJJ-st-gWC" secondAttribute="bottom" constant="1" id="4Ib-aO-anh"/>
+                            <constraint firstItem="sJJ-st-gWC" firstAttribute="trailing" secondItem="9oT-kK-uud" secondAttribute="trailing" id="5ge-A7-LAa"/>
+                            <constraint firstItem="Jna-ZE-2od" firstAttribute="width" secondItem="OPt-eG-1hl" secondAttribute="width" multiplier="0.9" id="6LV-6d-hrS"/>
+                            <constraint firstItem="09d-a7-niJ" firstAttribute="trailing" secondItem="9oT-kK-uud" secondAttribute="trailing" constant="30" id="Gry-Ml-ehJ"/>
+                            <constraint firstItem="rXY-I1-tSG" firstAttribute="centerX" secondItem="09d-a7-niJ" secondAttribute="centerX" id="I0E-o8-NKw"/>
+                            <constraint firstItem="Jna-ZE-2od" firstAttribute="height" secondItem="OPt-eG-1hl" secondAttribute="height" multiplier="0.09" id="KWM-w2-lRH"/>
+                            <constraint firstItem="9oT-kK-uud" firstAttribute="leading" secondItem="09d-a7-niJ" secondAttribute="leading" constant="30" id="M9I-Sl-vXt"/>
+                            <constraint firstItem="FG1-Sv-wuz" firstAttribute="centerX" secondItem="09d-a7-niJ" secondAttribute="centerX" id="QaA-3u-oJc"/>
+                            <constraint firstItem="Jna-ZE-2od" firstAttribute="centerX" secondItem="09d-a7-niJ" secondAttribute="centerX" id="R3i-7P-KMe"/>
+                            <constraint firstItem="rXY-I1-tSG" firstAttribute="width" secondItem="OPt-eG-1hl" secondAttribute="width" multiplier="0.9" id="WEg-1g-zd2"/>
+                            <constraint firstItem="4lf-Ys-Uz1" firstAttribute="top" secondItem="FG1-Sv-wuz" secondAttribute="bottom" constant="10" id="WjT-IU-Eqa"/>
+                            <constraint firstItem="9oT-kK-uud" firstAttribute="height" secondItem="OPt-eG-1hl" secondAttribute="height" multiplier="0.2" id="YA3-sY-YWO"/>
+                            <constraint firstItem="4lf-Ys-Uz1" firstAttribute="centerX" secondItem="OPt-eG-1hl" secondAttribute="centerX" id="Z2f-XZ-aMS"/>
+                            <constraint firstItem="FG1-Sv-wuz" firstAttribute="height" secondItem="OPt-eG-1hl" secondAttribute="height" multiplier="0.35" id="aer-Tk-UDW"/>
+                            <constraint firstItem="FG1-Sv-wuz" firstAttribute="top" secondItem="Jna-ZE-2od" secondAttribute="bottom" constant="21" id="axB-9R-3QH"/>
+                            <constraint firstItem="Jna-ZE-2od" firstAttribute="top" secondItem="09d-a7-niJ" secondAttribute="top" constant="10" id="dhR-1c-228"/>
+                            <constraint firstItem="rXY-I1-tSG" firstAttribute="height" secondItem="OPt-eG-1hl" secondAttribute="height" multiplier="0.06" id="dyf-2h-SjY"/>
+                            <constraint firstItem="sJJ-st-gWC" firstAttribute="leading" secondItem="9oT-kK-uud" secondAttribute="leading" id="hQp-ZK-ZzH"/>
+                            <constraint firstItem="FG1-Sv-wuz" firstAttribute="width" secondItem="OPt-eG-1hl" secondAttribute="width" multiplier="0.8" id="kmz-si-zdr"/>
+                            <constraint firstItem="9oT-kK-uud" firstAttribute="top" secondItem="4lf-Ys-Uz1" secondAttribute="bottom" constant="28" id="lvV-kK-Ikj"/>
+                            <constraint firstItem="09d-a7-niJ" firstAttribute="bottom" secondItem="rXY-I1-tSG" secondAttribute="bottom" constant="20" id="sZ4-Ji-PX6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="09d-a7-niJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="FG1-Sv-wuz" id="9Yk-bO-XRu"/>
+                        <outlet property="pressureValue" destination="9oT-kK-uud" id="kXQ-aY-jon"/>
+                        <outlet property="submitButton" destination="rXY-I1-tSG" id="uku-JZ-0Vr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQV-50-3ww" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VPo-Pt-30H">
+                    <connections>
+                        <action selector="takeAction:" destination="JGA-Oa-4qs" id="TYC-N3-jPp"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="111.2" y="280.20989505247377"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="uploadVitals" width="252" height="252"/>
+    </resources>
+</document>

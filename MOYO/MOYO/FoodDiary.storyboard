@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ypb-uC-fLQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Food Diary View Controller-->
+        <scene sceneID="3J2-wB-3Zz">
+            <objects>
+                <viewController storyboardIdentifier="cameraVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ypb-uC-fLQ" customClass="FoodDiaryViewController" customModule="MOYO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p4u-bd-M6G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadFood" translatesAutoresizingMaskIntoConstraints="NO" id="Mub-ru-UsO">
+                                <rect key="frame" x="47" y="38" width="281" height="200"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.055870378521126758" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WVQ-e7-eWF" appends="YES" id="hxf-Le-U9u"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAx-Nb-MTA">
+                                <rect key="frame" x="141" y="259" width="106" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Snap/Upload">
+                                    <color key="titleColor" red="0.054901960780000002" green="0.23137254900000001" blue="0.73177237969999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeAction:" destination="ypb-uC-fLQ" eventType="touchUpInside" id="QDk-H8-ppr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5x3-YV-Pwj">
+                                <rect key="frame" x="19" y="606.5" width="337.5" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitData:" destination="ypb-uC-fLQ" eventType="touchUpInside" id="WJJ-Hu-y2d"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter food name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vda-Vc-rbN">
+                                <rect key="frame" x="37.5" y="441.5" width="300" height="53.5"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wAx-Nb-MTA" firstAttribute="height" secondItem="p4u-bd-M6G" secondAttribute="height" multiplier="0.05" id="0fl-6e-chZ"/>
+                            <constraint firstItem="vda-Vc-rbN" firstAttribute="height" secondItem="p4u-bd-M6G" secondAttribute="height" multiplier="0.08" id="7Ct-jD-8Ja"/>
+                            <constraint firstItem="vda-Vc-rbN" firstAttribute="width" secondItem="p4u-bd-M6G" secondAttribute="width" multiplier="0.8" id="E8I-Nk-QiF"/>
+                            <constraint firstItem="Mub-ru-UsO" firstAttribute="top" secondItem="c4n-R2-S78" secondAttribute="top" constant="18" id="Hfb-Xs-l4U"/>
+                            <constraint firstItem="Mub-ru-UsO" firstAttribute="height" secondItem="p4u-bd-M6G" secondAttribute="height" multiplier="0.3" id="JzZ-3w-AOa"/>
+                            <constraint firstItem="c4n-R2-S78" firstAttribute="bottom" secondItem="5x3-YV-Pwj" secondAttribute="bottom" constant="20.5" id="QyQ-bj-dhd"/>
+                            <constraint firstItem="5x3-YV-Pwj" firstAttribute="leading" secondItem="c4n-R2-S78" secondAttribute="leading" constant="19" id="T2a-3B-tUj"/>
+                            <constraint firstItem="5x3-YV-Pwj" firstAttribute="height" secondItem="p4u-bd-M6G" secondAttribute="height" multiplier="0.07" constant="-6.6900000000000048" id="Z2a-l2-G96"/>
+                            <constraint firstItem="5x3-YV-Pwj" firstAttribute="centerX" secondItem="c4n-R2-S78" secondAttribute="centerX" constant="0.25" id="Z7n-28-A6u"/>
+                            <constraint firstItem="wAx-Nb-MTA" firstAttribute="centerX" secondItem="p4u-bd-M6G" secondAttribute="centerX" constant="6.5" id="ZSy-Zt-DS3"/>
+                            <constraint firstItem="wAx-Nb-MTA" firstAttribute="width" secondItem="p4u-bd-M6G" secondAttribute="width" multiplier="0.25" constant="12.25" id="ey5-Xh-G44"/>
+                            <constraint firstItem="c4n-R2-S78" firstAttribute="trailing" secondItem="5x3-YV-Pwj" secondAttribute="trailing" constant="18.5" id="gKY-zz-v0J"/>
+                            <constraint firstItem="wAx-Nb-MTA" firstAttribute="top" secondItem="Mub-ru-UsO" secondAttribute="bottom" constant="21" id="joF-Ij-6Zw"/>
+                            <constraint firstItem="Mub-ru-UsO" firstAttribute="centerX" secondItem="c4n-R2-S78" secondAttribute="centerX" id="oGn-Bs-w6r"/>
+                            <constraint firstItem="vda-Vc-rbN" firstAttribute="centerX" secondItem="c4n-R2-S78" secondAttribute="centerX" id="ovl-xp-VDF"/>
+                            <constraint firstItem="Mub-ru-UsO" firstAttribute="width" secondItem="p4u-bd-M6G" secondAttribute="width" multiplier="0.75" id="qqZ-qa-24e"/>
+                            <constraint firstItem="vda-Vc-rbN" firstAttribute="top" secondItem="wAx-Nb-MTA" secondAttribute="bottom" priority="999" constant="149" id="sHt-t5-MGn"/>
+                            <constraint firstItem="5x3-YV-Pwj" firstAttribute="top" secondItem="vda-Vc-rbN" secondAttribute="bottom" constant="111.5" id="sUL-pl-Bcv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c4n-R2-S78"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="Mub-ru-UsO" id="U7J-yf-hrA"/>
+                        <outlet property="enterFood" destination="vda-Vc-rbN" id="QOI-oF-bCt"/>
+                        <outlet property="fieldOffset" destination="sUL-pl-Bcv" id="OTn-DC-cC1"/>
+                        <outlet property="submitButton" destination="5x3-YV-Pwj" id="vsy-kO-I4U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCI-ZW-lql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WVQ-e7-eWF">
+                    <connections>
+                        <action selector="takeAction:" destination="ypb-uC-fLQ" id="dyC-Wl-j0r"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2488.8000000000002" y="397.15142428785612"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="uploadFood" width="1346" height="1048"/>
+    </resources>
+</document>
